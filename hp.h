@@ -6,7 +6,7 @@ class hp {
     bool setMaxHP(hptype new_max_hp) {
       if (new_max_hp < 1)
         return false;
-      
+
       MaxHP = new_max_hp;
 
       if (CurrentHP > MaxHP)
@@ -22,6 +22,7 @@ class hp {
     hptype getCurrentHP() {
       return CurrentHP;
     }
+
     void takeDamage(hptype damage) {
       if (damage > CurrentHP) {
         CurrentHP = 0;
@@ -40,8 +41,8 @@ class hp {
       CurrentHP += amount;
     }
 
-    hp() {CurrentHP = 1, MaxHP  = 1};
-    hp(hptype cHP, hptype mHP){
+    hp() {CurrentHP = 1; MaxHP  = 1;}
+    hp(hptype cHP, hptype mHP) {
       CurrentHP = cHP;
       MaxHP = mHP;
       if (CurrentHP > MaxHP)
